@@ -2,8 +2,7 @@ from django.db import models
 from core.models import BaseModel
 from django.contrib.auth.models import AbstractUser
 from .constants import GENDER_TYPE
-from .manager import UserManager
-from phonenumber_field.modelfields import PhoneNumberField
+from .managers import UserManager
 # Create your models here.
 class User(AbstractUser, BaseModel):
     email = models.EmailField(unique = True)
@@ -18,6 +17,3 @@ class User(AbstractUser, BaseModel):
 
     def __str__(self) -> str:
         return self.username
-
-
-

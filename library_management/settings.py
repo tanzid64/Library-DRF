@@ -29,15 +29,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_browser_reload',
+    # rest framework
     'rest_framework',
-    'account',
+    # installed app
     'service',
     'contact_us',
     'book',
     'core',
-    "phonenumber_field",
+    "user",
 ]
-AUTH_USER_MODEL = 'account.User'
+AUTH_USER_MODEL = 'user.User' # For custom user model
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
